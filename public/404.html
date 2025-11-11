@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>404 - Lost in Space</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background: radial-gradient(circle at center, #0a0a23 0%, #000000 100%);
+        color: #ffffff;
+        font-family: "Poppins", sans-serif;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 8rem;
+        margin: 0;
+        background: linear-gradient(90deg, #ff6ec4, #7873f5);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      p {
+        font-size: 1.5rem;
+        margin: 20px 0;
+        max-width: 600px;
+        line-height: 1.6;
+      }
+
+      a {
+        margin-top: 20px;
+        display: inline-block;
+        text-decoration: none;
+        padding: 12px 30px;
+        border-radius: 50px;
+        background: linear-gradient(90deg, #ff6ec4, #7873f5);
+        color: white;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+
+      a:hover {
+        transform: scale(1.1);
+        background: linear-gradient(90deg, #7873f5, #ff6ec4);
+      }
+
+      .stars {
+        position: absolute;
+        width: 2px;
+        height: 2px;
+        background: white;
+        border-radius: 50%;
+        animation: twinkle 2s infinite alternate;
+      }
+
+      @keyframes twinkle {
+        from {
+          opacity: 0.2;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      /* Random stars for visual spice */
+      .stars:nth-child(1) {
+        top: 20%;
+        left: 25%;
+        animation-delay: 0s;
+      }
+      .stars:nth-child(2) {
+        top: 40%;
+        left: 70%;
+        animation-delay: 0.5s;
+      }
+      .stars:nth-child(3) {
+        top: 60%;
+        left: 15%;
+        animation-delay: 1s;
+      }
+      .stars:nth-child(4) {
+        top: 80%;
+        left: 50%;
+        animation-delay: 1.5s;
+      }
+      .stars:nth-child(5) {
+        top: 30%;
+        left: 85%;
+        animation-delay: 2s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="stars"></div>
+    <div class="stars"></div>
+    <div class="stars"></div>
+    <div class="stars"></div>
+    <div class="stars"></div>
+
+    <h1>404</h1>
+    <p>
+      You seem to have drifted off into space...<br />
+      Let's bring you <a href="/">home</a> safely!
+    </p>
+  </body>
+</html>

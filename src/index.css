@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+/* Dark mode handling */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Theme-specific variables */
+:root {
+  --brand-bg: #f9fafb;
+  --brand-text: #424242;
+}
+
+.dark {
+  --brand-bg: #1e1e2f;
+  --brand-text: #e0e0e0;
+}
+
+html {
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button {
+  cursor: pointer;
+}
+
+@layer utilities {
+  .glow-card {
+    @apply rounded-2xl  shadow-lg transition-all duration-300 
+           hover:shadow-blue-400/50 dark:hover:shadow-blue-300/40 
+           hover:scale-[1.03];
+  }
+
+  .glow-card-blue {
+    @apply rounded-2xl  shadow-lg transition-all duration-300 
+           hover:shadow-blue-400/50 dark:hover:shadow-blue-300/40 
+           hover:scale-[1.03];
+  }
+
+  .glow-card-red {
+    @apply rounded-2xl shadow-lg transition-all duration-300 
+           hover:shadow-red-400/50 dark:hover:shadow-red-300/40 
+           hover:scale-[1.03];
+  }
+}
+
+.clickable {
+  @apply cursor-pointer transition duration-200 ease-in-out hover:opacity-80;
+}
+
+.hover-fx {
+  @apply transition-all duration-300 ease-in-out hover:text-orange-500 dark:hover:text-orange-400;
+}
